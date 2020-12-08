@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
+import GreetingsText from './components/GreetingsText';
+import LoginButton from './components/LoginButton';
+import LogoutButton from './components/LogoutButton';
 export default class App extends Component {
     state = {
         todoList: [],
@@ -11,7 +14,7 @@ export default class App extends Component {
         let newTodoList = this.state.todoList;
         newTodoList.push(this.state.todo);
         this.setState({
-            todo: { text: '', category: 'Coding' },
+            todo: { text: '', category: this.state.todo.category },
             todoList: newTodoList,
         });
     };
@@ -51,7 +54,9 @@ export default class App extends Component {
     render() {
         return (
             <div className="App">
-                <h1>Hello, Chuck!</h1>
+                <LoginButton />
+                <LogoutButton />
+                <GreetingsText />
                 <input
                     value={this.state.todo.text}
                     onChange={this.putOneTodo}

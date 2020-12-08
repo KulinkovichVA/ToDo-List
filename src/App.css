@@ -100,3 +100,14 @@ input:focus {
     font-family: 'Gochi Hand';
     font-size: 18px;
 }
+
+.login-button {
+    height: 50px;
+    background-color: white;
+    border: 3px solid blue;
+    border-radius: 15%;
+    font-family: 'Gochi Hand';
+    font-size: 20px;
+    letter-spacing: 0.1em;
+    font-weight: bold;
+}
